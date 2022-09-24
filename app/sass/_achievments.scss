@@ -1,0 +1,85 @@
+.slider-list {
+    display: flex;
+    margin: 0 auto;
+}
+
+.slider-item {
+    display: flex;
+    width: 25%;
+    background-color: $color-white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    padding: 20px 10px;
+}
+
+.slider-item-none {
+    display: none;
+}
+
+.slider-item-bg {
+    width: 100%;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 30px 0;
+    border-bottom: 2px solid $color-grey-separator;
+}
+
+.slider-buttons li {
+    margin: 0 7px;
+}
+
+.slider-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.slider-btn-active circle {
+    fill: $color-link;
+    opacity: 1;
+}
+
+.slider-btn:hover svg {
+    opacity: 0.6;
+}
+
+.slider-btn svg {
+    transition-duration: 0.5s;
+    transition-property: opacity;
+}
+
+.achievments {
+    background-color: $color-grey-bg;
+    border-bottom: 2px solid $color-grey-separator;
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-main;
+        padding: 30px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .slider-item-none {
+        display: flex;
+    }
+
+    .slider-item-bg {
+        width: 25%;
+    }
+
+    .slider-btn-none {
+        display: none;
+    }
+}

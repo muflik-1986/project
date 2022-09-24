@@ -1,0 +1,140 @@
+.description {
+    &__middle {
+        display: flex;
+        flex-direction: column;
+        border-left: 4px solid $color-grey-separator;
+        padding-left: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item-number {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        background: $color-gradient-sred-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: "";
+            background-image: url(../img/sign-flag.svg);
+            width: 23px;
+            height: 26px;
+            margin-right: 13px;
+        }
+    }
+
+    &__item-number-bag::before {
+        background-image: url(../img/sign-bag.svg);
+        width: 25px;
+        height: 21px;
+    }
+
+    &__item-number-star::before {
+        background-image: url(../img/sign-star.svg);
+        width: 25px;
+        height: 26px;
+    }
+
+    &__item-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-main;
+        padding-bottom: 40px;
+    }
+
+    &__item-title--padding {
+        padding-bottom: 0px;
+    }
+    &__down {
+        position: relative;
+    }
+
+    &__down img {
+        margin-bottom: 30px;
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    background: $color-gradient-sred-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 28px;
+}
+
+.title--mr {
+    margin-bottom: 60px;
+}
+
+.text {
+    font-size: 19px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.text span {
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .description__middle {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .description {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__top-middle {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        &__top {
+            max-width: 55%;
+            margin-right: 30px;
+        }
+
+        &__middle {
+            display: flex;
+            max-width: 45%;
+            align-self: flex-start;
+        }
+
+        &__down-info {
+            display: flex;
+        }
+
+        &__down-info p {
+            max-width: 55%;
+            margin-right: 30px;
+        }
+
+        &__down-info h2 {
+            max-width: 45%;
+            margin-left: 60px;
+        }
+    }
+
+    .title {
+        font-size: 38px;
+    }
+}
